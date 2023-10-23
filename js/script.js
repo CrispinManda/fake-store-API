@@ -30,11 +30,11 @@ class FakeStoreEcommerce {
 
     this.products.forEach(product => {
       const productCard = document.createElement('div');
-      productCard.classList.add('col-md-4', 'product', );
+      productCard.classList.add('col-md-3', 'product', );
       productCard.innerHTML = `
 
-      <div class="card d-flex flex-fill mx-2 " style="height:600px;">
-      <img src="${product.image}" class="card-img-top product-image" alt="${product.title}" style="width: 100%; height: 400px; object-fit: cover;">
+      <div class="card d-flex flex-fill mx-2 " style="height:600px; ">
+      <img src="${product.image}" class="card-img-top product-image" alt="${product.title}" style="width: 100%; height: auto; object-fit: cover;">
       <div class="card-body ">
 
     </div>
