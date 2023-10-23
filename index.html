@@ -74,6 +74,7 @@
 										<option value="0">All Categories</option>
 										<option value="1">Category 01</option>
 										<option value="1">Category 02</option>
+										<option value=""></option>
 									</select>
 									<input class="input" placeholder="Search here">
 									<button class="search-btn">Search</button>
@@ -151,7 +152,7 @@
 						<li><a href="#">Hot Deals</a></li>
 						<li><a href="#">Categories</a></li>
 						<li><a href="#">Electronics</a></li>
-						<li><a href="#">Jewelery</a></li>
+						<li ><a href="#">Jewelry</a></li>
 						<li><a href="#">Men's Clothing</a></li>
 						<li><a href="#">Women's Clothing</a></li>
 					</ul>
@@ -225,20 +226,21 @@
 				<div class="row">
 
 					
-					<div class="col-md-12">
-						<div class="section-title">
-							<h3 class="title">All Products</h3>
-							<div class="section-nav">
-								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab1">
-										Electronics</a></li>
-									<li><a data-toggle="tab" href="#tab1">Jewelery</a></li>
-									<li><a data-toggle="tab" href="#tab1">Men's Clothing</a></li>
-									<li><a data-toggle="tab" href="#tab1">Women's Clothing</a></li>
-								</ul>
+					<div class="container">
+						<div class="row">
+						  <div class="col-md-3">
+							<div class="dropdown">
+							  <button class="btn btn-secondary dropdown-toggle bg-danger" type="button" id="categoryDropdown" data-toggle="dropdown">
+								Categories
+							  </button>
+							  <div class="dropdown-menu" aria-labelledby="categoryDropdown">
+								<a class="dropdown-item" href="#" data-category="all">All Products</a>
+								<a class="dropdown-item" href="#" data-category="electronics">Electronics</a>
+								<a class="dropdown-item" href="#" data-category="clothing">Clothing</a>
+								<a class="dropdown-item" href="#" data-category="jewelery">Jewellery</a> <!-- New "Jewelry" category option -->
+							  </div>
 							</div>
-						</div>
-					</div>
+						  </div>
 					<!-- /section title -->
 
 					<!-- Products tab & slick -->
@@ -442,6 +444,7 @@
 		<script src="js/nouislider.min.js"></script>
 		<script src="js/jquery.zoom.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/jewellery.js"></script>
 		<script src="js/script.js"></script>
 
 
