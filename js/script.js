@@ -33,7 +33,7 @@ class FakeStoreEcommerce {
       productCard.classList.add('col-md-3', 'product', );
       productCard.innerHTML = `
 
-      <div class="card d-flex flex-fill mx-2 " style="height:600px; ">
+      <div class="card  d-flex flex-fill mx-2  " style="height:600px;  ">
       <img src="${product.image}" class="card-img-top product-image" alt="${product.title}" style="width: 100%; height: auto; object-fit: cover;">
       <div class="card-body ">
 
@@ -45,6 +45,8 @@ class FakeStoreEcommerce {
     </div>
     
   `;
+
+  
 
 
       const addToCartButton = productCard.querySelector('button');
