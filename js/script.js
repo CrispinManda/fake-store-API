@@ -5,7 +5,7 @@
         this.cart = new Cart();
         this.selectedCategory = 'all';
 
-        // Bind methods to the instance
+        
         this.fetchAndDisplayProducts = this.fetchAndDisplayProducts.bind(this);
         this.addToCart = this.addToCart.bind(this);
         this.updateCategory = this.updateCategory.bind(this);
@@ -30,13 +30,13 @@
       searchProducts() {
         const searchInput = document.getElementById('searchInput').value.toLowerCase();
 
-        // Filter products based on the search input
+        
         const filteredProducts = this.products.filter(product => {
           const title = product.title.toLowerCase();
           return title.includes(searchInput);
         });
 
-        // Display the filtered products
+        
         this.displayFilteredProducts(filteredProducts);
       }
 
@@ -60,7 +60,7 @@
           const addToCartButton = productCard.querySelector('button');
           addToCartButton.addEventListener('click', () => {
             if (this.isProductInCart(product.id)) {
-              // Product is already in the cart, handle accordingly (e.g., show a message)
+              
               console.log('Product is already in the cart');
             } else {
               this.addToCart(product.id);
@@ -81,7 +81,7 @@
         productContainer.innerHTML = '';
 
         filteredProducts.forEach(product => {
-          // Create and display product cards (same as in displayProducts)
+          
         });
       }
 
@@ -126,7 +126,7 @@
         } else {
           this.items.push({ product, quantity: 1 });
         }
-        this.saveCartToLocalStorage(); // Save cart data to local storage
+        this.saveCartToLocalStorage(); 
         this.updateCartSummary();
       }
 
@@ -134,14 +134,14 @@
         const index = this.items.findIndex(item => item.product.id === productId);
         if (index !== -1) {
           this.items.splice(index, 1);
-          this.saveCartToLocalStorage(); // Save cart data to local storage
+          this.saveCartToLocalStorage(); 
           this.updateCartSummary();
         }
       }
 
       clearCart() {
         this.items = [];
-        this.saveCartToLocalStorage(); // Save cart data to local storage
+        this.saveCartToLocalStorage(); 
         this.updateCartSummary();
       }
 
@@ -179,7 +179,7 @@
       }
 
       initCart() {
-        this.loadCartFromLocalStorage(); // Load cart data from local storage
+        this.loadCartFromLocalStorage(); 
         this.updateCartSummary();
       }
 
@@ -194,7 +194,7 @@
       }
     }
 
-    // Create an instance of FakeStoreEcommerce and initialize it
+    //  instance of FakeStoreEcommerce and initialized
     const fakeStoreEcommerce = new FakeStoreEcommerce();
     fakeStoreEcommerce.init();
 
